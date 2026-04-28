@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <style>
+    .bg { fill: #f8fafc; }
+    .frame { fill: #ffffff; stroke: #cbd5e1; stroke-width: 2; rx: 24; }
+    .panel { fill: #f1f5f9; stroke: #cbd5e1; stroke-width: 1.5; rx: 18; }
+    .heading { font: 700 20px Inter, sans-serif; fill: #0f172a; }
+    .label { font: 600 13px Inter, sans-serif; fill: #475569; }
+    .token { font: 500 12px Inter, sans-serif; fill: #334155; }
+    .badge { fill: #e2e8f0; stroke: #94a3b8; stroke-width: 1; rx: 10; }
+    .dot-green { fill: #22c55e; }
+    .dot-amber { fill: #f59e0b; }
+    .dot-red { fill: #ef4444; }
+    .dot-blue { fill: #3b82f6; }
+    .divider { stroke: #cbd5e1; stroke-width: 1; }
+  </style>
+  <rect class="bg" width="1200" height="700" rx="32" />
+  <rect class="frame" x="32" y="32" width="1136" height="636" />
+  <text x="60" y="72" class="heading">Context Visualizer Demo</text>
+  <text x="60" y="108" class="label">Local proxy UI showing blocks, token cost, and edit actions.</text>
+  <rect class="panel" x="60" y="140" width="300" height="488" />
+  <text x="80" y="178" class="heading" style="font-size:16px;">Context Blocks</text>
+  <line x1="80" y1="188" x2="340" y2="188" class="divider" />
+  <text x="80" y="222" class="token">Total 84,231 tokens</text>
+  <text x="80" y="244" class="token">Cost $0.2527</text>
+  <text x="80" y="266" class="token">Blocks 6</text>
+  <rect x="80" y="300" width="18" height="18" rx="9" class="dot-green" />
+  <text x="110" y="314" class="label">System Prompt</text>
+  <text x="110" y="334" class="token">1,842 tokens · $0.000553</text>
+  <rect x="80" y="360" width="18" height="18" rx="9" class="dot-amber" />
+  <text x="110" y="374" class="label">File Context</text>
+  <text x="110" y="394" class="token">38,102 tokens · $0.11430</text>
+  <rect x="80" y="420" width="18" height="18" rx="9" class="dot-red" />
+  <text x="110" y="434" class="label">Tool Result</text>
+  <text x="110" y="454" class="token">21,440 tokens · $0.06432</text>
+  <rect x="80" y="480" width="18" height="18" rx="9" class="dot-blue" />
+  <text x="110" y="494" class="label">Assistant Turn</text>
+  <text x="110" y="514" class="token">4,100 tokens · $0.01230</text>
+  <rect x="80" y="540" width="18" height="18" rx="9" class="dot-green" />
+  <text x="110" y="554" class="label">User Task</text>
+  <text x="110" y="574" class="token">2,547 tokens · $0.000764</text>
+  <rect class="panel" x="390" y="140" width="460" height="488" />
+  <text x="410" y="178" class="heading" style="font-size:16px;">Block Editor</text>
+  <rect x="410" y="195" width="420" height="38" rx="12" class="badge" />
+  <text x="426" y="222" class="label">SYSTEM PROMPT</text>
+  <text x="426" y="258" class="token">You are an expert software engineer working inside a large TypeScript monorepo. Your job is to implement the feature described by the user with precision and minimal surface area changes.</text>
+  <text x="426" y="292" class="token">Rules:</text>
+  <text x="426" y="314" class="token">- Never modify files outside the specified scope</text>
+  <text x="426" y="334" class="token">- Preserve existing TypeScript types</text>
+  <text x="426" y="354" class="token">- Write tests for public functions</text>
+  <text x="426" y="374" class="token">- Do not add new dependencies without asking</text>
+  <rect class="panel" x="880" y="140" width="220" height="488" />
+  <text x="900" y="178" class="heading" style="font-size:16px;">Actions</text>
+  <rect x="900" y="205" width="180" height="45" rx="12" fill="#6366f1" />
+  <text x="940" y="235" fill="#fff" font="700 14px Inter, sans-serif">Send to LLM</text>
+  <text x="900" y="275" class="label" fill="#ef4444">Discard call</text>
+  <text x="900" y="320" class="label">AI OPTIMIZE</text>
+  <text x="900" y="344" class="token" fill="#0f172a">Suggest cuts →</text>
+  <rect x="900" y="370" width="12" height="12" rx="6" class="dot-green" />
+  <text x="920" y="381" class="token">Keep — relevant</text>
+  <rect x="900" y="400" width="12" height="12" rx="6" class="dot-amber" />
+  <text x="920" y="411" class="token">Trim — has noise</text>
+  <rect x="900" y="430" width="12" height="12" rx="6" class="dot-red" />
+  <text x="920" y="441" class="token">Remove — waste</text>
+  <text x="900" y="480" class="label">After edits</text>
+  <text x="900" y="504" class="token">Original 84,231 tok</text>
+  <text x="900" y="526" class="token">Edited 44,489 tok</text>
+  <text x="900" y="546" class="token">Saved 47%</text>
+  <text x="900" y="566" class="token">Cost saved $0.119</text>
+</svg>

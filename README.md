@@ -54,6 +54,22 @@ The proxy listens on `http://localhost:3131` and handles any OpenAI-compatible o
 
 When the final call is intercepted, the request is held open while the UI displays the parsed context. Users can edit blocks, then either send the cleaned request or discard it.
 
+## Architecture
+
+The system consists of three main components:
+
+- **AI Agent** — sends requests to the local proxy instead of the upstream API
+- **Local Proxy** — intercepts final requests, stores pending payloads, serves the UI, and forwards edited payloads to the real API
+- **Browser UI** — receives SSE notifications, renders block context, and lets the user edit before sending
+
+![Architecture diagram](assets/architecture-diagram.svg)
+
+## Demo
+
+The demo image below shows the UI structure with the context block list, editable prompt content, action controls, and cost/tokens summary.
+
+![Context Visualizer demo](assets/ui-demo.svg)
+
 ## UI Panels
 
 - **Context Breakdown** — lists each block with type, token count, cost, and suggestion badges
